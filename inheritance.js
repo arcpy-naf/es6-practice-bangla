@@ -1,8 +1,19 @@
-class Child{
+class Parent{
+    constructor(){
+        this.fatherName= "dev";
+    }
+}
+
+
+class Child extends Parent{
     constructor(name){
-        this.ahfui = name;
+        super();
+        this.name = name;
+    }
+    getFullName(){
+        return this.name + " " + this.fatherName;
     }
 }
 const baby = new Child ("thakur");
-const baby2 = new Child ("Munsi")
-console.log(baby, baby2);
+const baby2 = new Child ("Munsi");
+console.log(baby.getFullName(), baby2.getFullName());
